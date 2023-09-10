@@ -19,7 +19,7 @@ PORT = int(environ.get('PORT', '8080'))
 
 # Bot pics and stickers
 STICKERS = (environ.get('STICKERS', 'CAACAgIAAxkBAAEGm9hjhf69CtQmXoeQ2HidYCGBFeZ4gAACxgEAAhZCawpKI9T0ydt5RysE CAACAgIAAxkBAAEGm9pjhf7I9jCDh3PpkocMNFcPJfisvwAC0wADVp29CvUyj5fVEvk9KwQ CAACAgIAAxkBAAEGm9xjhf7SH4Yc8EP5yI4e8BTH968ClwACGAADDbbSGX671giQDJU8KwQ')).split()
-PICS = (environ.get('PICS', 'https://telegra.ph/file/58fef5cb458d5b29b0186.jpg https://telegra.ph/file/f0aa4f433132769f8970c.jpg https://telegra.ph/file/f515fbc2084592eca60a5.jpg https://telegra.ph/file/20dbdcffaa89bd3d09a74.jpg https://telegra.ph/file/6045ba953af4def846238.jpg')).split()
+PICS = (environ.get('PICS', 'https://graph.org/file/ea418cc5fc869fe3b65f0.jpg')).split()
 
 # Bot Admins
 ADMINS = [int(admins) if id_pattern.search(admins) else admins for admins in environ.get('ADMINS', '').split()]
@@ -30,7 +30,7 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 INDEX_CHANNELS = [int(index_channels) if id_pattern.search(index_channels) else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
 auth_channel = environ.get('AUTH_CHANNEL', '')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001930913574'))
 
 # MongoDB information
 DATABASE_URL = environ.get('DATABASE_URL', "")
@@ -38,8 +38,8 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
 # Links
-SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/SL_Bots_Support')
-UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/SL_Bots_Updates')
+SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/rajbharmvsupport')
+UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/searchmoviesname')
 
 # Bot settings
 AUTO_FILTER = is_enabled((environ.get('AUTO_FILTER', "True")), True)
@@ -58,15 +58,15 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "✅ I Found: <code>{query}</code>\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating} / 10</a>\n☀️ Languages: {languages}\n📀 RunTime: {runtime} Minutes\n\n🗣 Requested by: {message.from_user.mention}\n©️ Powered by: <b>{message.chat.title}</b>")
 FILE_CAPTION = environ.get("FILE_CAPTION", "<i>{file_name}</i>\n\nᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ᴄʟᴏsᴇ ʙᴜᴛᴛᴏɴ ɪꜰ ʏᴏᴜ ʜᴀᴠᴇ sᴇᴇɴ ᴛʜᴇ ᴍᴏᴠɪᴇ")
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "mdiskshortner.link")
-SHORTLINK_API = environ.get("SHORTLINK_API", "36f1ae74ba1aa01e5bd73bdd0bc22aa915443501")
+SHORTLINK_URL = environ.get("SHORTLINK_URL", "onepagelink.in")
+SHORTLINK_API = environ.get("SHORTLINK_API", "a450a60a11e155aa443301ba2de6055a3cdbd7e2")
 WELCOME_TEXT = environ.get("WELCOME_TEXT", "Hello {mention}, Welcome to {title} group!")
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/SL_Bots_Updates")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/searchmoviesname/8674")
 
 # stream features vars
-F2LINK_C = int(environ.get("F2LINK_C", "-1001696019751"))
-ON_DWNLD = environ.get("ON_DWNLD", "aks-file-to-link-ashubhskeleton1.koyeb.app")
-ON_WATCH = environ.get("ON_WATCH", "aks-file-to-link-ashubhskeleton1.koyeb.app")
+F2LINK_C = int(environ.get("F2LINK_C", "-1001930913574"))
+ON_DWNLD = environ.get("ON_DWNLD", "https://rs-jipy.onrender.com/")
+ON_WATCH = environ.get("ON_WATCH", "https://rs-jipy.onrender.com/")
                            
 # Log
 LOG_STR = "Current Cusomized Configurations are:-\n"
